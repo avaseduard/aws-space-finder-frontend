@@ -19,7 +19,7 @@ Amplify.configure({
 
 export class AuthService {
   private user: CognitoUser | undefined;
-  private jwtToken: string | undefined;
+  public jwtToken: string | undefined;
   private temporaryCredentials: object | undefined;
 
   public async login(userName: string, password: string): Promise<object | undefined> {
